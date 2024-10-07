@@ -8,6 +8,7 @@
       UIs - Treact
     </title>
     <link rel="stylesheet" href="stylesheet.css" />
+    <script src="index.js"></script>
     <script
       src="https://kit.fontawesome.com/30dd1bf097.js"
       crossorigin="anonymous"
@@ -35,6 +36,47 @@
                 <li><a href="" class="nav__link--login">Login</a></li>
                 <li><a href="" class="nav__link--signup">Sign Up</a></li>
               </ul>
+              <button class="button__menu" onclick="openMenu()">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <div class="menu__backdrop">
+                <button
+                  class="button__menu button__menu--close"
+                  onclick="closeMenu()"
+                >
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+                <ul class="menu__links">
+                  <li class="menu__list">
+                    <a href="#landing" class="menu__link" onclick="closeMenu()"
+                      >About</a
+                    >
+                  </li>
+                  <li class="menu__list">
+                    <a href="#intro" class="menu__link" onclick="closeMenu()"
+                      >Blog</a
+                    >
+                  </li>
+                  <li class="menu__list">
+                    <a href="#pricing" class="menu__link" onclick="closeMenu()"
+                      >Pricing</a
+                    >
+                  </li>
+                  <li class="menu__list">
+                    <a href="#faqs" class="menu__link" onclick="closeMenu()"
+                      >Contact Us</a
+                    >
+                  </li>
+                  <li class="menu__list">
+                    <a href="#footer" class="menu__link" onclick="closeMenu()"
+                      >Login</a
+                    >
+                  </li>
+                  <li class="menu__list">
+                    <a class="hamburger__button">Sign Up</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </nav>
         </div>
@@ -44,14 +86,11 @@
           <div class="intro__column--wrapper">
             <div class="intro__column">
               <h1>
-                Beautiful React <br />
-                Templates <span class="purple">for you.</span>
+                Beautiful React Templates <span class="purple">for you.</span>
               </h1>
               <p class="template__para">
-                Our templates are easy to setup, understand and customize.
-                <br />
-                Fully modular components with a variety of pages and
-                <br />components.
+                Our templates are easy to setup, understand and customize. Fully
+                modular components with a variety of pages and components.
               </p>
               <div class="column__input__actions">
                 <input
@@ -93,7 +132,7 @@
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <div class="feature__highlights">
-              <div class="feature__individual__wrapper">
+              <div class="feature__individual__wrapper--odd">
                 <span class="feature__img__wrapper">
                   <img
                     src="https://treact.owaiskhan.me/static/media/shield-icon.daefe14b320b14fbd9cbd18908ac93ec.svg"
@@ -108,7 +147,7 @@
                   </p>
                 </span>
               </div>
-              <div class="feature__individual__wrapper">
+              <div class="feature__individual__wrapper--even">
                 <span class="feature__img__wrapper">
                   <img
                     src="https://treact.owaiskhan.me/static/media/support-icon.f9253ffa8cb6ffde5bbaa05eb5136375.svg"
@@ -123,7 +162,7 @@
                   </p>
                 </span>
               </div>
-              <div class="feature__individual__wrapper">
+              <div class="feature__individual__wrapper--odd">
                 <span class="feature__img__wrapper">
                   <img
                     src="https://treact.owaiskhan.me/static/media/customize-icon.367468c90fd796009b97fbfba67b2c6a.svg"
@@ -138,7 +177,7 @@
                   </p>
                 </span>
               </div>
-              <div class="feature__individual__wrapper">
+              <div class="feature__individual__wrapper--even">
                 <span class="feature__img__wrapper">
                   <img
                     src="https://treact.owaiskhan.me/static/media/reliable-icon.1367510a8f0a1bec76dc425d25f92f43.svg"
@@ -153,7 +192,7 @@
                   </p>
                 </span>
               </div>
-              <div class="feature__individual__wrapper">
+              <div class="feature__individual__wrapper--odd">
                 <span class="feature__img__wrapper">
                   <img
                     src="https://treact.owaiskhan.me/static/media/fast-icon.dbb971a73d4805d2fc3bcdacdb55beba.svg"
@@ -168,7 +207,7 @@
                   </p>
                 </span>
               </div>
-              <div class="feature__individual__wrapper">
+              <div class="feature__individual__wrapper--even">
                 <span class="feature__img__wrapper">
                   <img
                     src="https://treact.owaiskhan.me/static/media/simple-icon.673b7e1750b2a4ef32907fc164828d00.svg"
@@ -230,7 +269,7 @@
             <div class="get__started__textwrapper">
               <div class="get__started__text">
                 <span class="purple quality__span">STEPS</span>
-                <h2 class="quality__title">
+                <h2 class="quality__title getstarted__title">
                   Easy to <span class="purple">Get Started.</span>
                 </h2>
                 <ul class="get__started__list">
@@ -239,8 +278,7 @@
                     <div class="list__wrapper">
                       <h6 class="list__title">Register</h6>
                       <p class="list__para">
-                        Create an account with us using Google or<br />
-                        Facebook.
+                        Create an account with us using Google or Facebook.
                       </p>
                     </div>
                   </li>
@@ -249,8 +287,8 @@
                     <div class="list__wrapper">
                       <h6 class="list__title">Download</h6>
                       <p class="list__para">
-                        Browse and Download the template that you <br />like
-                        from the marketplace.
+                        Browse and Download the template that you like from the
+                        marketplace.
                       </p>
                     </div>
                   </li>
@@ -259,8 +297,8 @@
                     <div class="list__wrapper">
                       <h6 class="list__title">Run</h6>
                       <p class="list__para">
-                        Follow the instructions to setup and customize<br />
-                        the template to your needs.
+                        Follow the instructions to setup and customize the
+                        template to your needs.
                       </p>
                     </div>
                   </li>
@@ -278,7 +316,7 @@
               <h2 class="quality__title">
                 We Always Abide by Our <span class="purple">Principles.</span>
               </h2>
-              <p class="quality__para">
+              <p class="quality__para values__para__main">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -354,9 +392,8 @@
                   <button class="personal__button--green">BUY NOW</button>
                 </div>
               </div>
-              <div class="three__plans__personal__container">
-                <div class="three__plans__personal__line--purple"></div>
-                <div class="three__plans__personal__title">
+              <div class="three__plans__personal__container--purple">
+                <div class="three__plans__personal__title--purple">
                   <span class="name white">BUSINESS</span>
                   <span class="price white">$37.99</span>
                   <span class="duration white">MONTHLY</span>
@@ -368,7 +405,7 @@
                   <span class="feature white">22 Internal Pages</span>
                   <span class="feature white">Priority Assistance</span>
                 </div>
-                <div class="personal__button__container">
+                <div class="personal__button__container--purple">
                   <button class="personal__button--white">BUY NOW</button>
                 </div>
               </div>
@@ -568,7 +605,9 @@
                   © 2018 Treact Inc. All Rights Reserved.
                 </p>
                 <div class="footer__link__buttons">
-                  <i class="fa-brands fa-facebook-f footer__link__button__facebook"></i>
+                  <i
+                    class="fa-brands fa-facebook-f footer__link__button__facebook"
+                  ></i>
                   <i class="fa-brands fa-twitter footer__link__button"></i>
                   <i class="fa-brands fa-youtube footer__link__button"></i>
                 </div>
